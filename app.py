@@ -14,10 +14,11 @@ def index():
     return render_template('index.html',
                            anime_name = list(popular_df['name'].values),
                            num_ratings = list(popular_df['num_ratings'].values),
-                           rating = list(popular_df['avg_ratings'].values), # Change min number of votes required
+                           rating = list(popular_df['avg_ratings'].values),
                            genre = list(popular_df['genre'].values),
                            type = list(popular_df['type'].values),
-                           episodes = list(popular_df['episodes'].values))
+                           episodes = list(popular_df['episodes'].values),
+                           image = list(popular_df['image_url'].values))
 
 @app.route('/recommend')
 def recommend_ui():
@@ -36,6 +37,7 @@ def recommend():
         item.extend(list(temp_df.drop_duplicates('name')['name'].values))
         item.extend(list(temp_df.drop_duplicates('name')['genre'].values))
         item.extend(list(temp_df.drop_duplicates('name')['type'].values))
+        item.extend(list(temp_df.drop_duplicates('name')['image_url'].values))
         
         data.append(item)
     

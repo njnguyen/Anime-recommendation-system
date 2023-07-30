@@ -8,7 +8,7 @@
 <body style="background-color:lemonchiffon">
 
     <nav class="navbar" style="background-color:pink">
-        <a class="navbar-brand">My Anime Recommender</a>
+        <a class="navbar-brand" href="/">My Anime Recommender</a>
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/recommend">Recommend</a></li>
@@ -25,7 +25,7 @@
             {% for i in range(anime_name|length) %}
                 <div class="col-md-3" style="margin-top:50">
                     <div class="card-body">
-                        <!--<img class="card-img-top">-->
+                        <img class="card-img-top" src="{{ image[i] }}">
                         <h2>{{ anime_name[i] }}</h2>
                         <h4>Votes - {{ num_ratings[i] }}</h4>
                         <h4>Rating - {{ rating[i] }}</h4>
