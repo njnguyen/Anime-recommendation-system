@@ -1,2 +1,9 @@
-# anime-recsys
-Recommendation system for anime
+# Anime Recommendation System
+## Description
+## Getting Started
+### Prerequisites
+### Installation
+### Executing program
+## Usage
+## Sources
+## License
